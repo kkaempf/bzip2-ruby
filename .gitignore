@@ -1,6 +1,7 @@
 _10lines_
 doc
-ext/Makefile
+ext/bzip2/Makefile
+ext/bzip2/*.log
 *.o
 *.so
 *.bundle
@@ -8,3 +9,4 @@ pkg
 .bundle
 tmp
 Gemfile.lock
+*~
