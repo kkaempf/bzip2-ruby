@@ -25,6 +25,7 @@ VALUE bz_reader_close_bang(VALUE obj);
 VALUE bz_reader_finish(VALUE obj);
 VALUE bz_reader_lineno(VALUE obj);
 VALUE bz_reader_set_lineno(VALUE obj, VALUE lineno);
+VALUE bz_reader_pos(VALUE obj);
 
 /* Class methods */
 VALUE bz_reader_s_alloc(VALUE obj);

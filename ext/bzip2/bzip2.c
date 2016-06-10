@@ -229,6 +229,7 @@ void Init_bzip2() {
     rb_define_method(bz_cReader, "eof?",        bz_reader_eof,        0);
     rb_define_method(bz_cReader, "lineno",      bz_reader_lineno,     0);
     rb_define_method(bz_cReader, "lineno=",     bz_reader_set_lineno, 1);
+    rb_define_method(bz_cReader, "pos",         bz_reader_pos,        0);
     rb_define_method(bz_cReader, "to_io",       bz_to_io,             0);
     rb_define_alias(bz_cReader, "each_line", "each");
     rb_define_alias(bz_cReader, "closed", "closed?");

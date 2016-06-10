@@ -1030,3 +1030,18 @@ VALUE bz_reader_set_lineno(VALUE obj, VALUE lineno) {
     bzf->lineno = NUM2INT(lineno);
     return lineno;
 }
+
+/*
+ * Returns the total number of output bytes so far
+ *
+ * @return [Integer] the total number of output bytes so far
+ * 
+ */
+VALUE bz_reader_pos(VALUE obj) {
+    struct bz_file *bzf;
+
+    Get_BZ2(obj, bzf);
+    /* assumes 64bit integer */
+    return INT2NUM(((long)bzf->bzs.total_out_hi32 << 32) + (long)bzf->bzs.total_out_lo32);
+}
+
